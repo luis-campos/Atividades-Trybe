@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .muda {
+            border: 1px solid;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .mudaFundo {
+            padding: 10px;
+            margin: 30px;
+        }
+
+        .mudaTexto {
+            padding: 10px;
+            margin: 30px;
+        }
+    </style>
+    <div class="muda">
+        <h2>Cor de Fundo</h2>
+        <button class="mudaFundo" value="blue">Azul</button>
+        <button class="mudaFundo" value="Orange">Laranja</button>
+        <button class="mudaFundo" value="cyan">Cyano</button>
+    </div>
+    <div class="muda">
+        <h2>Cor do Texto</h2>
+        <button class="mudaTexto" value="white">Branco</button>
+        <button class="mudaTexto" value="red">Vermelho</button>
+        <button class="mudaTexto" value="green">Verde</button>
+
+        <p>
+            Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto
+            fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo e a
+            mexeu para fazer um livro de espécimes. Ele sobreviveu não apenas cinco séculos, mas também o salto para a
+            composição eletrônica, permanecendo essencialmente inalterado. Foi popularizado na década de 1960 com o
+            lançamento de folhas de Letraset contendo passagens de Lorem Ipsum e, mais recentemente, com software de
+            editoração eletrônica como o Aldus PageMaker, incluindo versões do Lorem Ipsum.
+        </p>
+    </div>
+    <script>
+        let botaoFundo = document.getElementsByClassName('mudaFundo');
+        let fundo = localStorage.color;
+        if (fundo) document.body.style.backgroundColor = fundo;
+        for (let i in botaoFundo) {
+            botaoFundo[i].addEventListener('click', function () {
+                fundo = botaoFundo[i].value;
+                localStorage.setItem('color', fundo);
+                document.body.style.backgroundColor = fundo;
+            })
+        }
+
+        let botaoTexto = document.getElementsByClassName('mudaFundo');
+        let par = document.getElementsByTagName('p')[0].innerText;
+        let texto = localStorage.color;
+        if (texto) document.par.style.fontcolor = texto;
+        for (let indice in botaoTexto) {
+            botaoTexto[indice].addEventListener('click', function () {
+                texto = botaoTexto[indice].value;
+                localStorage.setItem('color', texto);
+                document.par.style.fontcolor = texto;
+            })
+        }
+    </script>
+</body>
+
+</html>

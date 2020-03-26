@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = utf-8 />
+<title> Calculadora </title>
+</head>
+<body>
+
+  <label> Coloque este número ao quadrado:
+    <input type = "number" id = "square-input" size = "2">
+  </label>
+  <button id = "square-button"> Calcular </button>
+  <br> <br>
+  
+  <label> Metade deste número:
+    <input type = "number" id = "meia-entrada" size = "2">
+  </label>
+  <button id = "half-button"> Calcular </button>
+  <br> <br>
+  
+  <rótulo>
+    Fração:
+    <input type = "number" id = "percent1-input" size = "2">
+  </label>
+  <rótulo>
+    Todo:
+    <input type = "number" id = "percent2-input" size = "2">
+  </label>
+  <button id = "percent-button"> Calcular </button>
+  <br> <br>
+  
+  <label> Calcule a área do círculo com raio:
+    <input type = "number" id = "area-input" size = "2">
+  </label>
+  <button id = "area-button"> Calcular </button> 
+  <br> <br>
+  <div id = "solution"> </div>
+
+  <script>
+      //Quadrado
+      let quad = document.getElementById('square-button');
+      
+      quad.addEventListener('click', function(){
+          let quadInp = document.getElementById('square-input').value;
+          let solu = document.getElementById('solution').innerText = quadInp * quadInp;
+      });
+
+      //Metade
+      let met = document.getElementById('half-button');
+
+      met.addEventListener('click', function(){
+          let metInp = document.getElementById('meia-entrada').value;
+          let solu = document.getElementById('solution').innerText = metInp / 2;
+      })
+
+      //Fração / Todo
+      let frato = document.getElementById('percent-button');
+
+      frato.addEventListener('click', function(){
+        let per1 = document.getElementById('percent1-input').value;
+        let per2 = document.getElementById('percent2-input').value;
+
+        let solu = document.getElementById('solution').innerText = per1 / per2;
+      })
+
+      //Raio
+      let raio = document.getElementById('area-button');
+
+      raio.addEventListener('click', function(){
+          let raioInp = document.getElementById('area-input').value;
+          let solu = document.getElementById('solution').innerText = (raioInp * raioInp) * 3.14;
+      })
+  </script>
+  
+</body>
+</html>

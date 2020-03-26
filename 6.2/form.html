@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container-xl">
+    <fieldset class="form-group">
+      <label>Nome</label>
+      <input type="text" name="Pnome" class="form-control" maxlength="40" placeholder="Digite seu nome"
+        required="required"><br>
+      <label>E-mail</label>
+      <input type="email" name="email" class="form-control" maxlength="50" placeholder="Digite seu E-mail" required><br>
+      <label>CPF</label>
+      <input type="text" class="form-control" maxlength="11" placeholder="Digite seu CPF (sem pontos)" required><br>
+      <label>Endereço</label>
+      <input type="text" name="endereco" class="form-control" maxlength="200" placeholder="Digite seu endereço"
+        required><br>
+      <label>Cidade</label>
+      <input type="text" class="form-control" maxlength="28" placeholder="Digite sua Cidade" required><br>
+      <div class="form-check input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">Estados</label>
+        </div>
+        <select name="" id="estados" class="custom-select" required></select>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" name="moradia" class="form-check-input">
+        <label class="form-check-label">Apartamento</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" name="moradia" class="form-check-input">
+        <label class="form-check-label">Casa</label>
+      </div>
+    </fieldset>
+  </div>
+  <div>
+    <fieldset class="container-xl">
+      <label>Resumo</label><br>
+      <textarea name="Resumo" class="form-control" cols="60" rows="10" maxlength="1000"></textarea><br>
+      <label>Cargo</label>
+      <input type="text" class="form-control" name="Cargo" id=""><br>
+      <label>Descrição do cargo</label>
+      <input type="text" name="DescCargo" class="form-control"><br>
+      <label>Data de Início</label>
+      <input type="date" name="" class="form-control"><br>
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </fieldset>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

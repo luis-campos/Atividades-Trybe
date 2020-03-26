@@ -1,0 +1,54 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: gold;
+}
+
+body {
+	background-color: darkred;
+	box-shadow: 1px 1px 5px black;
+	color: white;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-around;
+	margin: auto;
+}
+
+nav {
+	border-bottom: black 1px solid;
+	width: 80%;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+}
+
+.noticia {
+	display: flex;
+	justify-content: space-between;
+	text-align: justify;
+}
+
+p {
+	font-size: medium;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+}
+
+.casas {
+	display: flex;
+	justify-content: space-around;
+}
