@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.5</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+      //Exercício 1
+      let tagH1 = document.createElement('h1');
+      tagH1.innerHTML = "Exercício 4.5 - JavaScript DOM";
+      document.body.appendChild(tagH1);
+
+      //Exercício 2
+      let divCont = document.createElement('div');
+      divCont.className ='main-content';
+      document.body.appendChild(divCont);
+
+      //Exercício 3
+      let outraDiv = document.createElement('div');
+      outraDiv.className = 'center-content';
+      divCont.appendChild(outraDiv);
+
+      //Exercício 4
+      let para = document.createElement('p');
+      para.innerHTML = "algum texto";
+      outraDiv.appendChild(para);
+
+      //Exercício 5
+      let divlet = document.createElement('div');
+      divlet.className = 'left-content';
+      divCont.appendChild(divlet);
+
+      //Exercício 6
+      let divrig = document.createElement('div');
+      divrig.className = 'right-content';
+      divCont.appendChild(divrig);
+
+      //Exercício 7
+      let img = document.createElement('img');
+      img.src="https://picsum.photos/200";
+      img.className = 'small-image';
+      divlet.appendChild(img);
+
+      //Exercício 8
+      let listNo = document.createElement('ul');
+      listNo.innerHTML = "<li>um</li> <li>dois</li> <li>três</li> <li>quatro</li> <li>cinco</li> <li>seis</li> <li>sete</li> <li>oito</li> <li>nove</li> <li>dez</li>";
+      divrig.appendChild(listNo);
+
+      //Exercício 9
+      let tagH31 = document.createElement('h3');
+      let tagH32 = document.createElement('h3');
+      let tagH33 = document.createElement('h3');
+      divCont.appendChild(tagH31);
+      divCont.appendChild(tagH32);
+      divCont.appendChild(tagH33);
+
+      //Bonus 1
+      tagH1.className = 'title';
+
+      //Bonus 2
+      tagH31.className = 'description';
+      tagH32.className = 'description';
+      tagH33.className = 'description';
+
+      //Bonus 3
+      divCont.removeChild(divlet);
+
+      //Bonus 4
+      divrig.style.marginRight = 'auto';
+
+      //Bonus 5
+      outraDiv.style.background = 'green'
+
+      //Bonus 6
+      listNo.innerHTML = "<li>um</li> <li>dois</li> <li>três</li> <li>quatro</li> <li>cinco</li> <li>seis</li> <li>sete</li> <li>oito</li>";
+    </script>
+  </body>
+</html>
